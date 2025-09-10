@@ -1,0 +1,51 @@
+@import 'settings';
+@import 'foundation-emails/scss/foundation-emails';
+
+@import 'header.scss';
+@import 'footer.scss';
+
+// Body Styles
+body,
+html,
+.body {
+    background: $white !important;
+}
+
+.body-drip {
+    .main-content {
+        background-color: $primary-color;
+
+        table.button.button-primary {
+            table {
+                td {
+                    background-color: $warning-color;
+                }
+
+                a {
+                    color: $light-gray;
+                }
+            }
+        }
+
+        a {
+            color: $warning-color;
+        }
+
+        h5 {
+            color: $light-gray;
+        }
+
+        p {
+            color: $light-gray;
+
+            .dark {
+                color: $black
+            }
+
+            .warning {
+                color: $alert-color;
+                font-size: 12px;
+            }
+        }
+    }
+}

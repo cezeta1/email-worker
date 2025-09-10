@@ -1,0 +1,17 @@
+{
+  "name": "template-parser",
+  "version": "1.0.0",
+  "main": "InkyScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "html-minifier": "^4.0.0",
+    "inky": "^1.4.2",
+    "juice": "11.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+@import 'settings';
+
+.header {
+    background-color: $primary-color;
+
+    .logo {
+        max-width: 60%;
+        width: 160px;
+        height: auto;
+    }
+}

@@ -1,0 +1,48 @@
+@import 'settings';
+
+.footer {
+    background-color: $white !important;
+
+    a {
+        color: $primary-color;
+        font-size: 12px;
+    }
+
+    .disclaimer p {
+        font-size: 10px;
+        color: $medium-gray;
+    }
+
+    .icon {
+        display: inline-block;
+        margin: 5px 5px;
+        Margin: 5px 5px; // fallback for Outlook.com
+        max-width: 32px;
+        height: auto;
+    }
+
+    .item-small {
+        margin-top: 10px;
+        Margin-top: 10px; // fallback for Outlook.com  max-width: 32px;
+        height: auto;
+        width: 85px !important;
+    }
+
+    .item {
+        margin-top: 10px;
+        Margin-top: 10px; // fallback for Outlook.com  max-width: 32px;
+        height: auto;
+        width: 145px !important;
+    }
+
+    p.address {
+        margin-top: 5px;
+        Margin-top: 5px; // fallback for Outlook.com  max-width: 32px;
+        font-size: 11px;
+        text-align: center;
+
+        a {
+            font-size: 11px !important;
+        }
+    }
+}

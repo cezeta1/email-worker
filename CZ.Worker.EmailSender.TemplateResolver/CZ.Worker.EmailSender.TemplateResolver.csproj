@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="./Scripts/**" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Jering.Javascript.NodeJS" Version="7.0.0" />
+        <PackageReference Include="Markdig" Version="0.41.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0.8" />
+        <PackageReference Include="Razor.Templating.Core" Version="2.1.0" />
+        <PackageReference Include="YamlDotNet" Version="16.3.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\CZ.Worker.EmailSender.Domain\CZ.Worker.EmailSender.Domain.csproj" />
+      <ProjectReference Include="..\CZ.Worker.EmailSender.TemplateDomain\CZ.Worker.EmailSender.TemplateDomain.csproj" />
+    </ItemGroup>
+
+</Project>

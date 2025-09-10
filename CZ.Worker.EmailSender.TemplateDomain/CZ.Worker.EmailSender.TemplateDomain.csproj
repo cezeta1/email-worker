@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net9.0; netstandard2.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <LangVersion>latest</LangVersion>
+
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Title>CZ.Worker.EmailSender.TemplateDomain</Title>
+        <Version>1.0.0</Version>
+        <Description>Library to expose Email Template data types. [ DO NOT REFERENCE DIRECTLY - use 'CZ.Worker.EmailSender.Sdk' ]</Description>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SendGrid" Version="9.29.3" />
+        <PackageReference Include="System.Text.Json" Version="9.0.8" />
+    </ItemGroup>
+    
+</Project>

@@ -1,0 +1,43 @@
+---
+    subject: Cezeta - Account Activated
+---
+
+@using System.Text.Json
+@using CZ.Worker.EmailSender.TemplateDomain.ServiceBus
+@using CZ.Worker.EmailSender.TemplateDomain.TemplateDataPayloads
+
+@{ ProfileData data = JsonSerializer.Deserialize<ProfileData>(Model.Content.Data); }
+
+<row>
+    <columns>
+        <spacer size="16"></spacer>
+
+        <p class="text-center">
+            Hi @data.FullName
+        </p>
+
+        <spacer size="16"></spacer>
+
+        <p class="text-center">
+            Thank you for activating your account.
+        </p>
+
+        <spacer size="16"></spacer>
+
+        <p class="text-center">
+            You can login <a href="https://cezeta1.github.io">here</a>.
+        </p>
+
+        <spacer size="16"></spacer>
+
+        <center>
+            <button href="https://cezeta1.github.io" class="button-primary">Login</button>
+        </center>
+    </columns>
+</row>
+
+<spacer size="8"></spacer>
+
+@await Html.PartialAsync($"./Shared/NeedHelp/en-NeedHelp.cshtml")
+
+<spacer size="8"></spacer>

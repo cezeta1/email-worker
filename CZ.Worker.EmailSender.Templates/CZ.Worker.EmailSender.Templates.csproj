@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+    
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+    
+    <Target Name="ContentsBeforeBuild" AfterTargets="BeforeBuild;BeforeRebuild">
+        <ItemGroup>
+            <EmbeddedResource Include="Templates\**\*.cshtml">
+                <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            </EmbeddedResource>
+        </ItemGroup>
+    
+        <ItemGroup>
+            <Content Include="Templates\**\*.cshtml" />
+        </ItemGroup>
+    
+        <ItemGroup>
+            <Content Include="Styles\foundation-emails\**\*" />
+        </ItemGroup>
+    
+        <ItemGroup>
+            <None Include="compilerconfig.json" />
+        </ItemGroup>
+    </Target>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0.8" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
+        <PackageReference Include="Razor.Templating.Core" Version="2.1.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\CZ.Worker.EmailSender.TemplateDomain\CZ.Worker.EmailSender.TemplateDomain.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="Assets\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Styles\foundation-emails\bower.json" />
+      <_ContentIncludedByDefault Remove="Styles\foundation-emails\package.json" />
+    </ItemGroup>
+
+</Project>
