@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Styles/footer.css",
+    "inputFile": "Styles/footer.scss"
+  },
+  {
+    "outputFile": "Styles/main.css",
+    "inputFile": "Styles/main.scss"
+  },
+  {
+    "outputFile": "Styles/header.css",
+    "inputFile": "Styles/header.scss"
+  }
+]

@@ -1,0 +1,39 @@
+﻿.footer {
+  background-color: #ffffff !important;
+}
+.footer a {
+  color: #2199e8;
+  font-size: 12px;
+}
+.footer .disclaimer p {
+  font-size: 10px;
+  color: #d4d4d4;
+}
+.footer .icon {
+  display: inline-block;
+  margin: 5px 5px;
+  Margin: 5px 5px;
+  max-width: 32px;
+  height: auto;
+}
+.footer .item-small {
+  margin-top: 10px;
+  Margin-top: 10px;
+  height: auto;
+  width: 85px !important;
+}
+.footer .item {
+  margin-top: 10px;
+  Margin-top: 10px;
+  height: auto;
+  width: 145px !important;
+}
+.footer p.address {
+  margin-top: 5px;
+  Margin-top: 5px;
+  font-size: 11px;
+  text-align: center;
+}
+.footer p.address a {
+  font-size: 11px !important;
+}

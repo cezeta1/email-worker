@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        
+        <!-- Docker Settings -->
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileBuildArguments>--target final</DockerfileBuildArguments>
+        <!--/////////////////-->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.20.1" />
+        <PackageReference Include="Destructurama.Attributed" Version="5.1.0" />
+        <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+        <PackageReference Include="Serilog.Sinks.AzureBlobStorage" Version="4.0.5" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CZ.Worker.EmailSender.Domain\CZ.Worker.EmailSender.Domain.csproj" />
+        <ProjectReference Include="..\CZ.Worker.EmailSender.Services\CZ.Worker.EmailSender.Services.csproj" />
+        <ProjectReference Include="..\CZ.Worker.EmailSender.TemplateDomain\CZ.Worker.EmailSender.TemplateDomain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+    </ItemGroup>
+</Project>
